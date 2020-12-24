@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Welcome to MAPLE Talk</title>
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<div class="status-bar">
+			<div class="status-bar__column">
+				<span>No Service</span>
+				<!--.To do wifi Icon-->
+				<i class="fas fa-wifi"></i>
+			</div>
+			<div class="status-bar__column">
+				<span>18:40</span>
+			</div>
+			<div class="status-bar__column">
+				<span>111%</span>
+				<i class="fas fa-battery-full fa-lg"></i>
+				<i class="fas fa-bolt"></i>
+			</div>
+		</div>
+
+		<header class="welcome-header">
+			<h1 class="welcome-header__title">Welcome to Maple Talk</h1>
+			<p class="welcome-header__text">
+				if you have a Maple Account,log in with your email or phone
+			</p>
+		</header>
+
+		<form action="friends.html" method="get" id="login-form">
+			<input name="username" type="text" placeholder="Email or phone number" />
+			<input name="psssward" type="password" placeholder="Passward" />
+			<input type="submit" value="Log In" />
+			<a href="#">Find Maple Talk Account or Passward</a>
+		</form>
+
+		<script
+			defer
+			src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
+			integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
