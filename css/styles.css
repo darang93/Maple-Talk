@@ -2,10 +2,12 @@
 @import "reset.css";
 @import "components/status-bar.css";
 @import "components/nav-bar.css";
+@import "components/screen-header.css";
 /* Components */
 @import "varibales.css";
 /* screens */
 @import "screens/login.css";
+@import "screens/friends.css";
 body {
 	font-family: "Nerko One", cursive;
 	height: 1000vh;
