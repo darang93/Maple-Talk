@@ -1,4 +1,5 @@
 :root {
-	--red: #ab2414;
+	--red: #ab2414; /*background-color: var(--redwhite);*/
 	--redwhite: #e4bba3;
+	--horizontal-space: 25px;
 }

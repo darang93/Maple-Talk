@@ -1,0 +1,39 @@
+.badge {
+	background-color: lightcoral;
+	width: 30px;
+	height: 30px;
+	display: block;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: papayawhip;
+	font-weight: 600;
+}
+.badge2 {
+	background-color: papayawhip;
+	width: 25px;
+	height: 25px;
+	display: block;
+	border-radius: 12.5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: lightcoral;
+	font-weight: 600;
+}
+
+.badge3 {
+	background-color: papayawhip;
+	width: 10px;
+	height: 10px;
+	display: block;
+	border-radius: 5px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	color: lightcoral;
+	font-weight: 600;
+	position: absolute;
+	right: 12px;
+}
