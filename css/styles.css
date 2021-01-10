@@ -3,7 +3,9 @@
 @import "components/status-bar.css";
 @import "components/nav-bar.css";
 @import "components/screen-header.css";
+@import "components/alt-screen-heeader.css";
 @import "components/badge.css";
+@import "components/icon-row.css";
 /* Components */
 @import "varibales.css";
 @import "components/user-component.css";
@@ -11,6 +13,8 @@
 @import "screens/login.css";
 @import "screens/friends.css";
 @import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
 body {
 	font-family: "Nerko One", cursive;
 	height: 150vh;

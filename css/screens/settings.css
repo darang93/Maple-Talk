@@ -1,0 +1,22 @@
+.settings__setting {
+	padding: 20px 0px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.settings__setting i {
+	margin-right: 10px;
+}
+
+.setting__icon {
+	margin-right: 20px;
+	font-size: 22px;
+	opacity: 0.8;
+}
+.settings__setting__column:last-child {
+	/* 같은 부모(같은 html 이 아님) 아래 같은 class 를 가진 자식들중 마지막 */
+	opacity: 0.5;
+}

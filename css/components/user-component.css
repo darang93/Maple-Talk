@@ -59,3 +59,8 @@
 	border-top: 1px solid black;
 	padding-top: 10px;
 }
+
+.word-space {
+	color: red;
+	margin-left: 7px;
+}

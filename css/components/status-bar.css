@@ -17,6 +17,7 @@
 	margin-left: 5px;
 }
 .status-bar__column:nth-child(2) {
+	/*같은 부모아래 (html 코드 전채가 아닌)*/
 	display: flex;
 	justify-content: center;
 }

@@ -2,4 +2,5 @@
 	--red: #ab2414; /*background-color: var(--redwhite);*/
 	--redwhite: #e4bba3;
 	--horizontal-space: 25px;
+	--main-border: 1px solid rgba(0, 0, 0, 0.2);
 }
