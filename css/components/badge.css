@@ -21,6 +21,7 @@
 	align-items: center;
 	color: lightcoral;
 	font-weight: 600;
+	animation: notificationAnimation 2s ease-in-out infinite;
 }
 
 .badge3 {
@@ -36,4 +37,19 @@
 	font-weight: 600;
 	position: absolute;
 	right: 12px;
+}
+.badge4 {
+	background-color: papayawhip;
+	width: 10px;
+	height: 10px;
+	display: block;
+	border-radius: 5px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	color: lightcoral;
+	font-weight: 600;
+	position: absolute;
+	right: -10px;
+	top: 0px;
 }

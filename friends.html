@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
+		<meta charset="UTF-8" /> <!--중요-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Freinds - MAPLE Talk</title>
 		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="shortcut icon" sizes="16x16 32x32 64x64" href="https://i.dlpng.com/static/png/6602303_preview.png"/> <!--relationship 는shortcut icon 위에 작은 이미지 -->
+		<meta name="description" content="this is maple talk"/> /*구글등 웹사이트 설명자료에 description을 찾음*/
+		
 	</head>
-	<body>
+	<body friends-screen-body>
 		<div class="status-bar">
 			<div class="status-bar__column">
 				<span>No Service</span>
@@ -37,6 +40,7 @@
 		</a>
 
 		<main class="friends-screen">
+			<a href="myinfo.html">
 			<div class="user-component">
 				<div class="user-component__column">
 					<img
@@ -45,11 +49,12 @@
 					/>
 					<div class="user-component__text">
 						<h4 class="user-component__title">Slime</h4>
-						<!--<h6 class="user-component__subtitle">This text what ever</h6>-->
+						<h6 class="user-component__subtitle">I can jump all day</h6>
 					</div>
 				</div>
 				<div class="user-component__column"></div>
 			</div>
+		</a>
 			<div class="friends-screen__channel">
 				<div class="friends-screen__channel-header">
 					<span>Chanel</span>
@@ -83,7 +88,7 @@
 				</li>
 				<li class="nav__btn">
 					<a class="nav__link" href="chats.html"
-						><span class="nav__notification badge"> 8 </span
+						><span class="nav__notification badge"> 4 </span
 						><i class="far fa-comment fa-2x"></i
 					></a>
 				</li>
@@ -100,6 +105,13 @@
 				</li>
 			</ul>
 		</nav>
+		<div id="splash-screen">
+			<i class="fab fa-canadian-maple-leaf"></i>
+		</div>
+
+		<div class="no-mobile">
+			<span>Your Screen To big</span>
+		</div>
 
 		<script
 			defer

@@ -1,0 +1,107 @@
+.myinfo-screen {
+	background-color: springgreen;
+	height: 0vh;
+	background-image: url(https://i.ytimg.com/vi/XYtHWyrVm30/maxresdefault.jpg); /* background img*/
+}
+.myinfo__navbar {
+	position: fixed;
+	width: 100%;
+	height: 10%;
+	bottom: 0;
+	padding: 70px 0px;
+	border-top: 2px solid wheat;
+	background-color: #1ccc82;
+}
+.myinfo__column {
+	display: flex;
+
+	text-align: center;
+	justify-content: center;
+}
+.myinfo__btn {
+	width: 33%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.myinfo-nav-icon {
+	font-size: 40px;
+	color: antiquewhite;
+	margin-bottom: 7px;
+}
+.myinfo-nav-text {
+	color: rgba(139, 0, 139, 0.5);
+	font-size: 17px;
+}
+.myinfo-screen .alt-header {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.alt-header__column2 {
+	width: 50%;
+	position: relative;
+}
+.alt-header__column2:last-child {
+	display: flex;
+}
+
+.myinfo__icon {
+	width: 33%; /*전채 화면이 아닌 부모의 몇 %*/
+	display: flex;
+	justify-content: flex-end;
+}
+.colorwhite {
+	color: white;
+}
+
+.myinfo__header-icon {
+	font-size: 25px;
+	color: white;
+}
+
+.myinfo-screen {
+	margin-top: 120px;
+}
+.myinfo__music {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 100px;
+	margin-bottom: 200px;
+}
+.myinfo__music img {
+	width: 100px;
+	height: 100px;
+	border-radius: 15px;
+}
+
+.myinfo__music span {
+	font-size: 20px;
+	background-color: rgba(0, 0, 0, 0.3);
+	color: white;
+	margin-top: 15px;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+.myinfo__music:last-child img {
+	border-radius: 50%;
+}
+
+@media screen and (min-width: 1000px) {
+	/* 스크린 사이즈가 바뀌면 아래 정보로 바꾼다!!*/
+	.myinfo-screen {
+		background-color: springgreen;
+		height: 0vh;
+		background-image: none;
+	}
+}
+
+@media screen and (orientation: landscape) {
+	/* 모바일에서 가로모드일 때  아래 정보로 바꾼다!!*/
+	.myinfo-screen {
+		background-color: springgreen;
+		height: 0vh;
+		background-image: none;
+	}
+}

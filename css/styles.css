@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
 @import "reset.css";
+@import "components/alt-screen-heeader.css";
 @import "components/status-bar.css";
 @import "components/nav-bar.css";
 @import "components/screen-header.css";
-@import "components/alt-screen-heeader.css";
+@import "components/no-mobile.css";
 @import "components/badge.css";
 @import "components/icon-row.css";
 /* Components */
@@ -15,6 +16,8 @@
 @import "screens/find.css";
 @import "screens/more.css";
 @import "screens/settings.css";
+@import "screens/chat.css";
+@import "screens/myinfo.css";
 body {
 	font-family: "Nerko One", cursive;
 	height: 150vh;
@@ -23,4 +26,19 @@ body {
 
 .main-screen {
 	padding: 0px var(--horizontal-space);
+}
+@keyframes bodychange {
+	0% {
+		transform: rotate(0);
+	}
+	50% {
+		border-radius: 0%;
+		transform: rotate(90);
+		border-color: wheat;
+	}
+	100% {
+		border-radius: 30px;
+		transform: rotate(0);
+		background-color: white;
+	}
 }

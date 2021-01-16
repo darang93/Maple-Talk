@@ -15,12 +15,26 @@
 
 .nav__link {
 	color: #270f04;
-	position: relative;
+	position: relative; /*가 있어야 top bottom lef 등을 사용할 수 있음 부모가 relative 여야 absolute를 부모에 맞춰서 사용*/
 }
+
+@keyframes notificationAnimation {
+	0% {
+		transform: none;
+	}
+	50% {
+		transform: translateY(-7px) rotateY(360deg); /*각은 deg 꼭 붙여야함*/
+	}
+	100% {
+		transform: none;
+	}
+}
+
 .nav__notification {
-	position: absolute;
+	position: absolute; /*가장 가까운 position relative 에 맞춰서 이동 ,없음시 body 로 맞춤*/
 	left: 15px;
 	bottom: 15px;
+	animation: notificationAnimation 2s ease-in-out infinite;
 }
 .nav__notification2 {
 	background-color: lightcoral;
@@ -34,4 +48,30 @@
 	position: absolute;
 	left: 30px;
 	bottom: 25px;
+}
+@keyframes appearBtnAnimation {
+	from {
+		transform: translateY(50px);
+		opacity: 0;
+	}
+	to {
+		transform: none;
+		opacity: 1;
+	}
+}
+
+.nav__btn {
+	animation: appearBtnAnimation 0.3s ease-in-out forwards; /*forward 가 있어여 마지막 transform: none; 자리에 남음*/
+	transform: translateY(50px);
+	opacity: 0;
+}
+
+.nav__btn:nth-child(2) {
+	animation-delay: 0.3s;
+}
+.nav__btn:nth-child(3) {
+	animation-delay: 0.6s;
+}
+.nav__btn:nth-child(4) {
+	animation-delay: 0.9s;
 }

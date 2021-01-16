@@ -20,3 +20,12 @@
 	/* 같은 부모(같은 html 이 아님) 아래 같은 class 를 가진 자식들중 마지막 */
 	opacity: 0.5;
 }
+.settings-list {
+	margin-top: 120px;
+}
+.setting-screen .alt-header {
+	border-bottom: solid 2px slategray;
+	background-color: salmon;
+	padding-bottom: 10px;
+	z-index: 3;
+}

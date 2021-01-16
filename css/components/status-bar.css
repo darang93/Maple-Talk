@@ -8,6 +8,7 @@
 	border-bottom: solid 2px slategray;
 	align-items: center;
 	background-color: cornsilk;
+	z-index: 5; /*status bar 가 가장 앞에 보이게, 숫자가 클수록 더 앞에 나옴*/
 }
 .status-bar__column {
 	width: 33%;

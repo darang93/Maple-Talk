@@ -31,3 +31,29 @@
 	justify-content: space-between;
 	color: rgba(o, o, o, 0.5);
 }
+
+@keyframes hideSplashScreen {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		visibility: hidden; /* 끝날 때 보이지 안도록 하게하고 밑에 위의 화면이 사라저 밑의 화면 클릭이 가능해진다 (html 에서 이 요소를 신경쓰지 않는다 하지만 코드에는 잇음 !*/
+	}
+}
+
+#splash-screen {
+	background-color: #f4f7e6;
+	position: absolute;
+	width: 100vw; /* width 는 vw*/
+	height: 100vh;
+	top: 0;
+	z-index: 5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 122px;
+	color: coral;
+	animation: hideSplashScreen 1s ease-in-out forwards; /*forward 는 애니매이션의 마지막 자연으로 영원히 남는다*/
+	animation-delay: 0.5s;
+}

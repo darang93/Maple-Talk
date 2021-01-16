@@ -5,6 +5,10 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: fixed;
+	width: 100%;
+	box-sizing: border-box; /* width 가 100%일때 border box 가 없으면 margin 과 padding 값만큼 100% + 로 늘어나 화면에 모든 요소가 보이지 않음*/
+	top: 0;
 }
 
 .alt-header__title {
@@ -15,6 +19,22 @@
 .alt-header__column:first-child {
 	margin-right: auto; /*오른쪽애서 멀어질 수 있는 최대한 으로 멀어진다*/
 }
+.alt-header__column:nth-child(2) {
+	text-align: center;
+}
 .alt-header__column:last-child {
 	margin-left: auto; /*왼쪽애서 멀어질 수 있는 최대한 으로 멀어진다*/
+	display: flex;
+	justify-content: flex-end;
+}
+.margin-left__10 {
+	margin-left: 10px;
+}
+.alt-header__column span:last-child {
+	margin-left: 20px;
+}
+
+.alt-header__column {
+	width: 33%;
+	position: relative;
 }

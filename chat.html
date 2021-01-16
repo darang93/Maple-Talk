@@ -3,10 +3,18 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Settings - MAPLE Talk</title>
+		<title>Chat MapleTalk - MAPLE Talk</title>
 		<link rel="stylesheet" href="css/styles.css" />
+		<link
+			rel="shortcut icon"
+			sizes="16x16 32x32 64x64"
+			href="https://i.dlpng.com/static/png/6602303_preview.png"
+		/>
+		<!--relationship 는shortcut icon 위에 작은 이미지 -->
+		<meta name="description" content="this is maple talk" />
+		/*구글등 웹사이트 설명자료에 description을 찾음*/
 	</head>
-	<body>
+	<body class="chat-screen__pinkbean">
 		<div class="status-bar">
 			<div class="status-bar__column">
 				<span>No Service</span>
@@ -24,70 +32,84 @@
 
 		<header class="alt-header">
 			<div class="alt-header__column">
-				<a href="more.html">
+				<a href="chats.html">
 					<i class="fas fa-angle-left fa-3x"></i>
 				</a>
 			</div>
 			<div class="alt-header__column">
-				<h1 class="alt-header__title">Settings</h1>
+				<h1 class="alt-header__title">Pink Bean</h1>
 			</div>
 			<div class="alt-header__column">
-				<i class="fas fa-search fa-lg"></i>
+				<span><i class="fas fa-search fa-lg"></i></span>
+				<span><i class="fas fa-bars fa-lg"></i></span>
 			</div>
 		</header>
 
-		<main class="main-screen">
-			<ul class="settings-list">
-				<li class="settings__setting">
-					<div class="settings__setting__column">
-						<i class="fas fa-bullhorn setting__icon"></i>
-						<span>Notices</span>
+		<main class="main-screen main-chat">
+			<div class="chat_timestamp">WonGiDay,June 30,2020</div>
+
+			<div class="message-row">
+				<img
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6BqE3pjSHXzuG7PKIzlTnGVOJR7nop9PTyg&usqp=CAU"
+				/>
+				<div class="message-row__content">
+					<span class="message__author">Pink Bean</span>
+					<div class="message__info">
+						<span class="message__bubble">I'm Hungry </span>
+						<span class="message__time">05:20</span>
 					</div>
-					<div class="settings__setting__column"></div>
-				</li>
-				<li class="settings__setting">
-					<div class="settings__setting__column">
-						<i class="fas fa-flask setting__icon"></i>
-						<span>Maple Lab</span>
+				</div>
+			</div>
+			<div class="message-row">
+				<img
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6BqE3pjSHXzuG7PKIzlTnGVOJR7nop9PTyg&usqp=CAU"
+				/>
+				<div class="message-row__content">
+					<span class="message__author">Pink Bean</span>
+					<div class="message__info">
+						<span class="message__bubble">I just downloaded star bubble </span>
+						<span class="message__time">05:21</span>
 					</div>
-					<div class="settings__setting__column"></div>
-				</li>
-				<li class="settings__setting">
-					<div class="settings__setting__column">
-						<i class="fas fa-info-circle setting__icon"></i>
-						<span>Version</span>
+				</div>
+			</div>
+			<div class="message-row message-row--own">
+				<div class="message-row__content">
+					<div class="message__info">
+						<span class="message__bubble">Cool I've heard of it </span>
+						<span class="message__time">05:22</span>
 					</div>
-					<div class="settings__setting__column">Latest Version</div>
-				</li>
-			</ul>
+				</div>
+			</div>
+			<div class="message-row">
+				<img
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6BqE3pjSHXzuG7PKIzlTnGVOJR7nop9PTyg&usqp=CAU"
+				/>
+				<div class="message-row__content">
+					<span class="message__author">Pink Bean</span>
+					<div class="message__info">
+						<span class="message__bubble"
+							>Im bored who wants to play with me?
+						</span>
+						<span class="message__time">05:23</span>
+					</div>
+				</div>
+			</div>
 		</main>
 
-		<nav class="nav">
-			<ul class="nav__list">
-				<li class="nav__btn">
-					<a class="nav__link" href="friends.html"
-						><i class="far fa-user fa-2x"></i
-					></a>
-				</li>
-				<li class="nav__btn">
-					<a class="nav__link" href="chats.html"
-						><span class="nav__notification badge"> 8 </span
-						><i class="far fa-comment fa-2x"></i
-					></a>
-				</li>
-				<li class="nav__btn">
-					<a class="nav__link" href="find.html"
-						><i class="fas fa-search fa-2x"></i
-					></a>
-				</li>
-				<li class="nav__btn">
-					<a class="nav__link" href="more.html"
-						><span class="nav__notification2"> </span
-						><i class="fas fa-ellipsis-h fa-2x"></i
-					></a>
-				</li>
-			</ul>
-		</nav>
+		<form action="" class="reply">
+			<!--inpur등 이 포함되어야 하면 form 을 부모로 만들어 쓴다-->
+			<div class="reply__column">
+				<i class="far fa-plus-square fa-lg opacity-low"></i>
+			</div>
+			<div class="reply__column">
+				<input type="text" placeholder="Write Message" />
+				<i class="fab fa-optin-monster reply-icon to-left opacity-low"></i>
+				<button class="reply-icon"><i class="fas fa-paper-plane"></i></button>
+			</div>
+		</form>
+		<div class="no-mobile">
+			<span>Your Screen To big</span>
+		</div>
 
 		<script
 			defer

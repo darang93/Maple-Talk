@@ -1,0 +1,244 @@
+.chat-screen__pinkbean {
+	background-color: pink;
+	height: 1100vh;
+}
+.chat-screen__pinkbean .alt-header,
+.chat-screen__pinkbean .status-bar {
+	position: fixed;
+	width: 100%;
+	box-sizing: border-box; /* width 가 100%일때 border box 가 없으면 margin 과 padding 값만큼 100% + 로 늘어나 화면에 모든 요소가 보이지 않음*/
+	top: 0;
+}
+.chat-screen__pinkbean .alt-header {
+	top: 5px;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.main-chat {
+	margin-top: 120px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	animation: fadeIn 0.3s linear;
+}
+
+.chat-screen__pinkbean .alt-header {
+	background-color: palevioletred;
+	height: 90px;
+	border-bottom: solid 2px slategray;
+	padding-top: 58px;
+	z-index: 2;
+}
+.chat-screen__pinkbean .status-bar {
+	z-index: 3; /*앞으로 나오게 수가 높을수록 앞으로 나옴*/
+}
+.chat_timestamp {
+	color: papayawhip;
+	background-color: rgba(0, 0, 250, 0.3);
+	padding: 8px 15px;
+	border-radius: 20px;
+	font-size: 18px;
+	margin-bottom: 25px;
+}
+
+@keyframes fromLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+@keyframes fromRight {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.message-row {
+	width: 100%;
+	display: flex;
+	margin-bottom: 20px;
+	animation: fromLeft 1.5s ease-in-out;
+}
+.message-row img {
+	width: 65px;
+	height: 65px;
+	border-radius: 35%;
+	margin-right: 15px;
+	box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, 0.2); /* box showdow 사용  offset-x | offset-y | blur-radius | color */
+}
+.message__info {
+	display: flex;
+	align-items: flex-end;
+}
+.message__author {
+	opacity: 0.8;
+	font-size: 15px;
+	margin-bottom: 8px;
+	display: block; /*block 가 아니면 span 이기 때문에 maegin을 못줌*/
+}
+
+@keyframes bubbleBackShadow {
+	0% {
+		box-shadow: 0px 8px 8px 8px orchid;
+	}
+	33% {
+		box-shadow: 8px 0px 8px 8px orchid;
+	}
+	66% {
+		box-shadow: 8px 8px 8px 8px orchid;
+	}
+	80% {
+		box-shadow: 8px 8px 8px 0px orchid;
+	}
+	100% {
+		box-shadow: 0px 8px 8px 8px orchid;
+	}
+}
+
+.message__bubble {
+	background-color: seashell;
+	padding: 13px; /*span 에서 padding 은 박스 침투 가능 span끼리는 침투 불가*/
+	border-radius: 18px;
+	margin-right: 5px;
+	border-top-left-radius: 0px; /*한쪽은 작지게*/
+	font-size: 18px;
+
+	text-decoration: none; /* 가끔 텍스트에 밑줄이 뜨거나 할 수 있음 그걸 없에는거*/
+	animation: bubbleBackShadow 2s linear infinite;
+}
+.message__time {
+	opacity: 0.8;
+	font-size: 15px;
+}
+
+.message-row--own {
+	justify-content: flex-end;
+	animation: fromRight 1.5s ease-in-out;
+}
+
+.message-row--own .message__bubble {
+	background-color: antiquewhite;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 18px;
+	order: 1; /*flex 부보 아래있는 자식들의 순서르 재배정 0이 처음*/
+	margin-right: 0px;
+	margin-left: 5px;
+	text-decoration: none;
+}
+
+.message-row--own .message__time {
+	order: 0; /*flex 부보 아래있는 자식들의 순서르 재배정 0다음 1*/
+}
+
+/*.message-row--own .message__info {
+	/* message__info 는 time 와 bubble의 부모 */
+/*	flex-direction: row-reverse;} /*자식들의 위치를 거꾸로 뒤집음 이미 위에 다른 방법으로 해서 주석처리함*/
+
+.reply {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: aquamarine;
+	display: flex;
+	justify-content: space-between;
+	padding: 7px 25px;
+	align-items: center;
+	box-sizing: border-box;
+	transition: all 0.3 ease-in-out;
+}
+.reply .reply__column:first-child {
+	width: 10%;
+}
+.reply .reply__column:last-child {
+	width: 90%;
+	position: relative; /* position absolute 의 부모*/
+}
+.reply__column {
+	box-sizing: border-box;
+}
+.reply input {
+	box-sizing: border-box;
+	padding: 14px;
+	width: 100%;
+	border: 3px solid darkorange;
+	border-radius: 10px;
+	transition: all 0.3s ease-in-out; /*width 와 transform 1개 이상 모두 바꾸고 싶으면 all 을 슨다*/
+}
+
+.reply__column:last-child > i, /* button 도 설정했기 때문에 button 안에있는 i 도 같이 움직이는 것을 방지함 >는 바로 밑에있는 자식 설정 */
+.reply__column:last-child button {
+	position: absolute;
+}
+.reply-icon {
+	position: absolute;
+	right: 8px;
+	top: 12px;
+	color: purple;
+	font-size: 23px;
+}
+
+.to-left {
+	right: 57px;
+}
+
+.reply__column button {
+	background-color: darkturquoise;
+	border-radius: 5px;
+	border: 1px solid antiquewhite; /*solid 자리에 none 도 가능*/
+	width: 40px;
+	height: 30px;
+	transform: translateY(
+		-3px
+	); /*무언가 이미 위치가 정해졌는데 top padding margin등의 영향을 안받고 움직여버림*/
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+	outline: palevioletred 2px solid; /*outline 는 border 밖에*/
+}
+
+.opacity-low {
+	opacity: 0.5;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-optin-monster,
+.reply button {
+	transition: opacity 0.3s ease-in-out; /*all 아닌 opacity 값만 0.3s ease in out 효과를 줌*/
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-optin-monster,
+.reply:focus-within button {
+	/*reply 안에 뭔가 focus 되있으면*/
+	opacity: 0;
+}
+
+.reply :focus-within input {
+	/*input:focus 도 가능함*/
+	width: 90vw;
+	transform: translateX(-11.5%) translateY(-80px);
+}
+
+.reply:focus-within {
+	transform: translateY(80px);
+}

@@ -100,3 +100,23 @@
 .open-post__heart-count span {
 	margin-left: 3px;
 }
+@keyframes heartBeat {
+	0% {
+		color: white;
+		transform: none;
+	}
+	50% {
+		color: red;
+		transform: scale(3);
+	}
+	100% {
+		color: white;
+		transform: none;
+	}
+}
+
+.open-post__heart-count:hover .fa-heart {
+	/*open-post__heart 가 hover 면 안에있는 fa-heart 를 선택*/
+	will-change: transform; /* transform 이 봐뀔거라는걸 브라우저에게 미리 알려줘 바뀌는 동작이 버벅이지 않고 더 스무드 하게 도와줌*/
+	animation: heartBeat 1s linear infinite;
+}
